@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        pepe: ['14.9','15']
+        postgres: ['14.9','15']
 
 
     services:
       postgres:
-        image: postgres: ${{matrix.pepe}}
+        image: postgres: ${{ matrix.postgres }}
         env:
           POSTGRES_USER: decide
           POSTGRES_PASSWORD: decide
